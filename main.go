@@ -218,9 +218,9 @@ func auth(email, pwd string) (string, string, error) {
 	if err != nil {
 		return "", "", err
 	}
-	if !strings.HasPrefix(obj.User.Plan, "Premium") {
-		return "", "", errors.New("User doesn't have a Premium plan.")
-	}
+//	if !strings.HasPrefix(obj.User.Plan, "Premium") {
+//		return "", "", errors.New("User doesn't have a Premium plan.")
+//	}
 	return obj.AccessToken, obj.User.PlanDisplayName, nil
 }
 
